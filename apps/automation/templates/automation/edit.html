@@ -1,0 +1,45 @@
+{% extends 'automation/_base_add_edit.html' %}
+
+{% block title %}
+Edit Jenkins Job Details...
+{% endblock %}
+
+{% block action %}
+action="{% url 'automation_app:edit' employee.id %}"
+{% endblock %}
+
+{% block heading %}
+<h3>Update Jenkins Job Details...</h3>
+{% endblock %}
+
+{% block gitrepoblock %}
+<input type="text" name="gitrepo" id="id_gitrepo" class="form-control" required maxlength="100" value="{{ employee.gitrepo }}" />
+{% endblock %}
+
+{% block gitbranchblock %}
+<input type="text" name="gitbranch" id="id_gitbranch" class="form-control" required maxlength="100" value="{{ employee.gitbranch }}" />
+{% endblock %}
+
+{% block envblock %}
+<input type="text" name="env" id="id_env" class="form-control" required maxlength="100" value="{{ employee.env }}" />
+{% endblock %}
+
+{% block tagsblock %}
+<input type="text" name="tags" id="id_tags" class="form-control" required maxlength="100" value="{{ employee.tags }}" />
+{% endblock %}
+
+{% block processesblock %}
+<input type="text" name="processes" id="id_processes" class="form-control" required maxlength="100" value="{{ employee.processes }}" />
+{% endblock %}
+
+{% block googlechaturlblock %}
+<input type="text" name="googlechaturl" id="id_googlechaturl" class="form-control" required maxlength="100" value="{{ employee.googlechaturl }}" />
+{% endblock %}
+
+{% block reportpathblock %}
+<input type="text" name="reportpath" id="id_reportpath" class="form-control" required maxlength="100" value="{{ employee.reportpath }}" />
+{% endblock %}
+
+{% block record %}
+<button type="submit" class="btn btn-primary">Update Job</button>
+{% endblock %}

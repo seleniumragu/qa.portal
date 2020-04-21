@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="description" content="Application by Ragu Sekaran">
+	<meta name="author" content="Ragu Sekaran">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="apple-touch-icon" href=""> {% load static %}
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	 crossorigin="anonymous">
+
+	<!-- Link to Bootstrap CSS file -->
+	<link rel="stylesheet" href="{% static 'automation/css/vendor/bootstrap/bootstrap.min.css' %}" type="text/css">
+
+	<!-- Link to Materialize CSS file -->
+	<!-- <link rel="stylesheet" href="{% static 'automation/css/vendor/materialize/materialize.min.css' %}" type="text/css"> -->
+
+	<!-- Link to your favicon.ico file -->
+	<link rel="shortcut icon" href="{% static 'automation/img/favicon.ico' %}" type="image/x-icon">
+
+	<!-- Link to your css file -->
+	<link rel="stylesheet" href="{% static 'automation/css/main.css' %}" type="text/css">
+
+</head>
+
+<body>
+	{% block content %}{% endblock %}
+
+
+	<!-- Link to Materialize JS file -->
+	<!-- <script src="{% static 'automation/js/vendor/materialize/materialize.min.js' %}"></script> -->
+
+	<!-- JQuery comes first in the list -->
+	<script src="{% static 'automation/js/vendor/bootstrap/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'automation/js/vendor/bootstrap/popper.min.js' %}"></script>
+	<script src="{% static 'automation/js/vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+	<!-- Link to your js file -->
+	<script src="{% static 'automation/js/main.js' %}"></script>
+</body>
+
+</html>

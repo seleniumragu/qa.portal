@@ -1,0 +1,45 @@
+{% extends 'automation/_base_add_edit.html' %}
+
+{% block title %}
+Add Jenkins Job details...
+{% endblock %}
+
+{% block action %}
+action="{% url 'automation_app:add' %}"
+{% endblock %}
+
+{% block heading %}
+<h3>Enter Jenkins Job details...</h3>
+{% endblock %}
+
+{% block gitrepoblock %}
+{{ form.gitrepo }}
+{% endblock %}
+
+{% block gitbranchblock %}
+{{ form.gitbranch }}
+{% endblock %}
+
+{% block envblock %}
+{{ form.env }}
+{% endblock %}
+
+{% block tagsblock %}
+{{ form.tags }}
+{% endblock %}
+
+{% block processesblock %}
+{{ form.processes }}
+{% endblock %}
+
+{% block googlechaturlblock %}
+{{ form.googlechaturl }}
+{% endblock %}
+
+{% block reportpathblock %}
+{{ form.reportpath }}
+{% endblock %}
+
+{% block record %}
+<button type="submit" class="btn btn-primary">Create Job</button>
+{% endblock %}

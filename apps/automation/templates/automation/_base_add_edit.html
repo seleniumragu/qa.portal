@@ -1,0 +1,77 @@
+{% extends 'automation/_base.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<form method="POST" class="post-form" {% block action %} {% endblock %}>
+	{% csrf_token %}
+	<div class="container">
+		<br>
+		<div class="form-group row">
+			<label class="col-form-label"></label>
+			<div class="col-sm-4">
+				{% block heading %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">GIT Repo:</label>
+			<div class="col-sm-4">
+				{% block gitrepoblock %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Git Branch:</label>
+			<div class="col-sm-4">
+				{% block gitbranchblock %}
+				{% endblock %}
+			</div>
+		</div>
+        <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Env:</label>
+			<div class="col-sm-4">
+				{% block envblock %}
+				{% endblock %}
+			</div>
+		</div>
+        <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Tags:</label>
+			<div class="col-sm-4">
+				{% block tagsblock %}
+				{% endblock %}
+			</div>
+		</div>
+        <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Processes:</label>
+			<div class="col-sm-4">
+				{% block processesblock %}
+				{% endblock %}
+			</div>
+		</div>
+        <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Google Chat URL:</label>
+			<div class="col-sm-4">
+				{% block googlechaturlblock %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Report Path:</label>
+			<div class="col-sm-4">
+				{% block reportpathblock %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-form-label"></label>
+			<div class="m-3">
+				{% block record %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}
